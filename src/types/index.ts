@@ -25,10 +25,13 @@ export interface SocialLink {
 }
 
 export interface Project {
-  slug: 'alpha' | 'neon-runner' | 'dreamdev-web'
-  stack: readonly string[]
+  slug: 'alpha' | 'neon-runner' | 'voxel-shooter' | 'pixel-art-tool' | 'terra-gen'
+  stack: string
   cover: string
-  links: ReadonlyArray<{ label: 'source' | 'play'; href: string }>
+  links: {
+    source: string
+    download?: string
+  }
 }
 
 export type SkillCategory = 'engines' | 'languages' | 'frontend' | 'design' | 'tools'

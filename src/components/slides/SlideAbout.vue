@@ -26,7 +26,7 @@ function isTypewriter(p: string): boolean {
     class="relative flex h-full w-full items-center overflow-hidden"
     aria-label="About"
   >
-    <div class="relative z-10 mx-auto flex w-full max-w-5xl flex-col justify-center px-4 sm:px-6">
+    <div class="relative z-10 flex flex-col justify-center section-container">
       <div class="flex flex-col gap-4 sm:gap-6">
         <div data-slide-anim>
           <SectionHeading shimmer>

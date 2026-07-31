@@ -12,7 +12,7 @@ const { t } = useI18n()
     class="relative flex h-full w-full items-center overflow-hidden"
     aria-label="Experience"
   >
-    <div class="relative z-10 mx-auto flex w-full max-w-4xl flex-col gap-6 px-4 sm:gap-10 sm:px-6">
+    <div class="relative z-10 flex flex-col gap-6 sm:gap-10 section-container">
       <div data-slide-anim>
         <SectionHeading shimmer>
           {{ t('experience.heading') }}

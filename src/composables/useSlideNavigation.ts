@@ -108,7 +108,7 @@ export function useSlideNavigation(options: UseSlideNavigationOptions): SlideNav
     activeTween = gsap.to(index, {
       value: clamped,
       duration: transitionDuration,
-      ease: 'power3.inOut',
+      ease: 'power2.inOut',
       overwrite: 'auto',
       onComplete: () => {
         activeTween = null

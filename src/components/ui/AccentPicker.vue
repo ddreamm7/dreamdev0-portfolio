@@ -44,6 +44,7 @@ const currentSwatch = computed(() => {
   >
     <button
       type="button"
+      data-cursor-hover
       :aria-label="t('header.accent')"
       :title="t('header.accent')"
       :aria-expanded="open"
@@ -69,7 +70,7 @@ const currentSwatch = computed(() => {
         v-if="open"
         role="dialog"
         :aria-label="t('header.accent')"
-        class="border-ctp-surface1 bg-ctp-mantle/95 absolute top-full right-0 z-50 mt-2 w-64 origin-top-right rounded-xl border p-3 shadow-2xl backdrop-blur"
+        class="border-ctp-overlay0 bg-ctp-mantle absolute top-full right-0 z-[100] mt-2 w-64 origin-top-right rounded-xl border p-3 shadow-2xl shadow-black/20"
       >
         <div class="text-ctp-subtext0 mb-2 px-1 text-xs font-semibold tracking-wider uppercase">
           {{ t('header.accent') }}
@@ -79,6 +80,7 @@ const currentSwatch = computed(() => {
             v-for="s in swatches"
             :key="s.id"
             type="button"
+            data-cursor-hover
             :aria-label="s.label"
             :aria-pressed="s.isActive"
             :title="s.label"

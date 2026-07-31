@@ -18,7 +18,7 @@ defineExpose({ root })
 <template>
   <footer
     ref="root"
-    class="fixed inset-x-0 bottom-0 z-30 flex h-16 items-center px-4 sm:h-20 sm:px-6 md:px-12 lg:px-20"
+    class="flex h-16 shrink-0 items-center px-4 sm:h-20 sm:px-6 md:px-8 lg:px-12"
     :aria-label="t('progress.aria')"
   >
     <div class="flex w-full items-center gap-4 sm:gap-6 md:gap-8">

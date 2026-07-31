@@ -39,7 +39,7 @@ const variantClass = computed(() => {
     case 'outline':
       return 'border border-ctp-surface2 bg-transparent text-ctp-text hover:border-accent hover:text-accent'
     default:
-      return 'bg-accent text-ctp-base hover:bg-accent-strong shadow-sm'
+      return 'border border-ctp-surface1 bg-ctp-surface0/60 text-ctp-subtext1 hover:border-accent hover:bg-accent hover:text-accent-on'
   }
 })
 </script>

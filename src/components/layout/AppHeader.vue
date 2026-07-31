@@ -34,7 +34,7 @@ defineExpose({ root, items })
 <template>
   <header
     ref="root"
-    class="fixed inset-x-0 top-0 z-40 flex h-16 items-center justify-between gap-3 px-4 sm:h-20 sm:px-6 md:px-12 lg:px-20"
+    class="relative z-[100] flex h-16 shrink-0 items-center justify-between gap-3 px-4 sm:h-20 sm:px-6 md:px-8 lg:px-12"
   >
     <a
       data-entry-item
@@ -77,7 +77,7 @@ defineExpose({ root, items })
         data-entry-item
         type="button"
         :aria-current="props.active === s.id ? 'true' : undefined"
-        class="hover:text-ctp-text cursor-pointer rounded-md px-3 py-1.5 text-sm font-medium transition-colors"
+        class="hover:text-accent cursor-pointer rounded-md px-3 py-1.5 text-sm font-medium transition-colors relative"
         :class="props.active === s.id ? 'text-accent' : 'text-ctp-subtext1'"
         @click="go(s.id)"
       >
@@ -101,3 +101,20 @@ defineExpose({ root, items })
     </div>
   </header>
 </template>
+
+<style scoped>
+nav button::after {
+  content: '';
+  position: absolute;
+  inset-inline: 0.75rem;
+  bottom: 0;
+  height: 2px;
+  background-color: var(--accent);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+nav button[aria-current="true"]::after {
+  transform: scaleX(1);
+}
+</style>

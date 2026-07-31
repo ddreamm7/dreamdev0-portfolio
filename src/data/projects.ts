@@ -1,22 +1,49 @@
 import type { Project } from '@/types'
 
-export const projects: readonly Project[] = [
+export const projects: Project[] = [
   {
     slug: 'alpha',
-    stack: ['Unity', 'C#', 'Blender'],
-    cover: '/projects/alpha.svg',
-    links: [{ label: 'source', href: 'https://github.com/dreamdev0' }],
+    stack: 'Unity',
+    cover: '/project-placeholder.svg',
+    links: {
+      source: 'https://github.com/dreamdev0',
+      download: 'https://github.com/dreamdev0/alpha/releases/latest',
+    },
   },
   {
     slug: 'neon-runner',
-    stack: ['Unreal Engine', 'C++', 'Niagara'],
-    cover: '/projects/neon-runner.svg',
-    links: [{ label: 'source', href: 'https://github.com/dreamdev0' }],
+    stack: 'Unreal Engine',
+    cover: '/project-placeholder.svg',
+    links: {
+      source: 'https://github.com/dreamdev0',
+      download: 'https://github.com/dreamdev0/neon-runner/releases/latest',
+    },
   },
   {
-    slug: 'dreamdev-web',
-    stack: ['Vue', 'Nuxt', 'Astro', 'Tailwind'],
-    cover: '/projects/dreamdev-web.svg',
-    links: [{ label: 'source', href: 'https://github.com/dreamdev0' }],
+    slug: 'voxel-shooter',
+    stack: 'Unity',
+    cover: '/project-placeholder.svg',
+    links: {
+      source: 'https://github.com/dreamdev0',
+      download: 'https://github.com/dreamdev0/voxel-shooter/releases/latest',
+    },
+  },
+  {
+    slug: 'pixel-art-tool',
+    stack: 'Vue 3',
+    cover: '/project-placeholder.svg',
+    links: {
+      source: 'https://github.com/dreamdev0',
+      download: 'https://github.com/dreamdev0/pixel-art-tool/releases/latest',
+    },
+  },
+  {
+    slug: 'terra-gen',
+    stack: 'Godot',
+    cover: '/project-placeholder.svg',
+    links: {
+      source: 'https://github.com/dreamdev0',
+      download: 'https://github.com/dreamdev0/terra-gen/releases/latest',
+    },
   },
 ] as const

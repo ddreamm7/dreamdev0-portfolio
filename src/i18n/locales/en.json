@@ -36,7 +36,7 @@
     "greeting": "Hi, I'm {name} ✨",
     "tagline": "Game Programmer & Frontend Web Developer",
     "scroll": "Scroll",
-    "ctaContact": "Get in touch"
+    "ctaContact": "Contact Me"
   },
   "about": {
     "heading": "About",
@@ -62,6 +62,7 @@
   "projects": {
     "heading": "Projects",
     "source": "Source",
+    "download": "Download",
     "play": "Play",
     "items": {
       "alpha": {
@@ -72,9 +73,17 @@
         "title": "Neon Runner",
         "description": "An endless cyberpunk runner made in Unreal Engine 5."
       },
-      "dreamdev-web": {
-        "title": "dreamdev web",
-        "description": "A personal site experiment with Vue, Nuxt and Astro."
+      "voxel-shooter": {
+        "title": "Voxel Shooter",
+        "description": "A voxel-based FPS prototype with destructible environments."
+      },
+      "pixel-art-tool": {
+        "title": "Pixel Art Tool",
+        "description": "A browser-based pixel art editor with layers and export."
+      },
+      "terra-gen": {
+        "title": "Terra Gen",
+        "description": "Procedural terrain generation tool using FastNoise and Godot."
       }
     }
   },

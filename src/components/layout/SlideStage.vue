@@ -31,7 +31,7 @@ function playEntryStagger(slide: HTMLElement, delay = 0.4): void {
   gsap.fromTo(
     children,
     { y: 48, opacity: 0 },
-    { y: 0, opacity: 1, duration: 1.1, ease: 'power3.out', stagger: 0.15, delay },
+    { y: 0, opacity: 1, duration: 1.1, ease: 'power2.out', stagger: 0.15, delay },
   )
 }
 
@@ -89,7 +89,7 @@ useGsap((ctx) => {
           xPercent: -100 * dir,
           opacity: 0.35,
           duration: props.transitionDuration,
-          ease: 'power3.inOut',
+          ease: 'power2.inOut',
         },
         0,
       )
@@ -106,7 +106,7 @@ useGsap((ctx) => {
           xPercent: 0,
           opacity: 1,
           duration: props.transitionDuration,
-          ease: 'power3.inOut',
+          ease: 'power2.inOut',
         },
         0,
       )
@@ -119,7 +119,7 @@ useGsap((ctx) => {
             y: 0,
             opacity: 1,
             duration: 0.95,
-            ease: 'power3.out',
+            ease: 'power2.out',
             stagger: 0.12,
           },
           props.transitionDuration * 0.5,
@@ -159,7 +159,7 @@ onBeforeUnmount(() => {
 
 useGsapReveal(stageEl, {
   initial: { opacity: 0 },
-  enter: { opacity: 1, duration: 0.4, ease: 'power1.out' },
+  enter: { opacity: 1, duration: 1, ease: 'power2.out' },
   when: 'mount',
 })
 </script>
@@ -174,7 +174,7 @@ useGsapReveal(stageEl, {
       v-for="(item, i) in components"
       :key="item.id"
       :ref="(el) => setSlideRef(el as Element | null, i)"
-      class="slide-panel absolute inset-0 px-4 pt-[max(4rem,env(safe-area-inset-top))] pb-[max(4rem,env(safe-area-inset-bottom))] sm:px-6 sm:pt-[max(5rem,env(safe-area-inset-top))] sm:pb-[max(5rem,env(safe-area-inset-bottom))] md:px-12 lg:px-20"
+      class="slide-panel absolute inset-0"
       :class="{ 'pointer-events-none': !isActive(item.id) }"
       :aria-hidden="!isActive(item.id)"
       :inert="!isActive(item.id) ? true : undefined"
